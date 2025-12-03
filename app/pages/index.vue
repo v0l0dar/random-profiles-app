@@ -19,7 +19,12 @@ const {
       <div v-else-if="error" class="text-center text-red-500">
         Failed to load profiles
       </div>
-      {{ profiles }}
+      <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <ProfileCard
+          v-for="profile in profiles"
+          :key="profile.id"
+          :profile="profile" />
+      </div>
     </div>
   </main>
 </template>

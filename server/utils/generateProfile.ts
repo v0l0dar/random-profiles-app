@@ -4,13 +4,15 @@ import type { Profile } from '@/types/profile';
 export function generateProfile(): Profile {
   const firstName = faker.person.firstName();
   const lastName = faker.person.lastName();
-  const gender = faker.person.sex() as 'male' | 'female';
+  // const gender = faker.person.sex() as 'male' | 'female';
+  const id = faker.string.uuid();
 
   return {
-    id: faker.string.uuid(),
+    id: id,
     name: `${firstName} ${lastName}`,
     email: faker.internet.email({ firstName, lastName }),
-    avatarUrl: `https://api.testingbot.com/v1/avatar?name=${encodeURIComponent(firstName + '+' + lastName)}&gender=${gender}&size=200`,
+    avatarUrl: `https://i.pravatar.cc/256?u=${id}`,
+    // avatarUrl: `https://testingbot.com/free-online-tools/random-avatar/256?u=${encodeURIComponent(firstName + '+' + lastName + '+' + gender)}`,
     username: faker.internet.username({ firstName, lastName }),
     phone: faker.phone.number(),
     website: faker.internet.url(),
