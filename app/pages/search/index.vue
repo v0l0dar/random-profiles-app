@@ -31,7 +31,6 @@ useHead({
         :disabled="pending"
         aria-label="Generate new random profiles"
         @click="() => refresh()">
-        <Icon name="material-symbols:refresh" class="text-xl" />
         New Random 10
       </button>
     </div>
