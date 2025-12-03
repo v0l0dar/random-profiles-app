@@ -1,0 +1,32 @@
+{
+  "name": "random-profiles-app",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "type-check": "nuxt typecheck",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"format": "prettier --write ."
+  },
+  "dependencies": {
+    "@nuxt/eslint": "^1.11.0",
+    "@tailwindcss/vite": "^4.1.17",
+    "eslint": "^9.39.1",
+    "nuxt": "^4.2.1",
+    "tailwindcss": "^4.1.17",
+    "vue": "^3.5.25",
+    "vue-router": "^4.6.3",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.1.0",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.6.2"
+  }
+}
