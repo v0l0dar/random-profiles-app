@@ -1,6 +1,6 @@
 import { ProfileSchema } from '@/types/profile';
 
-const cache = new Map<string, any>();
+const cache = new Map<string, unknown>();
 
 export default defineEventHandler((event) => {
   const id = getRouterParam(event, 'id');

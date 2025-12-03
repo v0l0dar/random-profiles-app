@@ -25,6 +25,11 @@ const {
           :key="profile.id"
           :profile="profile" />
       </div>
+      <div class="text-center mt-12">
+        <NuxtLink to="/search" class="btn-primary">
+          View More (10 Random)
+        </NuxtLink>
+      </div>
     </div>
   </main>
 </template>
