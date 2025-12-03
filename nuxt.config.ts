@@ -7,6 +7,12 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
   },
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
   devtools: { enabled: true },
   compatibilityDate: '2025-07-15',
 });
