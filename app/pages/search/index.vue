@@ -1,10 +1,11 @@
 <script setup lang="ts">
+const { searchProfiles } = useApi();
 const {
   data: profiles,
   pending,
   error,
   refresh,
-} = await useAsyncData('search', () => $fetch('/api/search'));
+} = await useAsyncData('search', searchProfiles);
 
 useHead({
   title: 'Search Results – 10 Random Profiles',

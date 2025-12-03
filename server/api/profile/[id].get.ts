@@ -1,6 +1,5 @@
 import { ProfileSchema } from '@/types/profile';
-
-const cache = new Map<string, unknown>();
+import { profileCache } from '../../utils/store';
 
 export default defineEventHandler((event) => {
   const id = getRouterParam(event, 'id');
@@ -9,12 +8,14 @@ export default defineEventHandler((event) => {
     throw createError({ statusCode: 400, statusMessage: 'Invalid profile ID' });
   }
 
-  if (cache.has(id)) {
-    return cache.get(id);
+  if (profileCache.has(id)) {
+    return profileCache.get(id);
   }
 
   const profile = { ...generateProfile(), id };
   const validated = ProfileSchema.parse(profile);
-  cache.set(id, validated);
+
+  profileCache.set(id, validated);
+
   return validated;
 });

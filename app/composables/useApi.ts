@@ -10,10 +10,7 @@ export const useApi = () => {
   };
 
   const searchProfiles = async (): Promise<Profile[]> => {
-    const all = await $fetch<Profile[]>('/api/profiles');
-    return all
-      .concat(Array.from({ length: 10 - all.length }, () => generateProfile()))
-      .slice(0, 10);
+    return await $fetch<Profile[]>('/api/search');
   };
 
   return { getProfiles, getProfile, searchProfiles };

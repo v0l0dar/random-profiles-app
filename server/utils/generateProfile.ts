@@ -4,7 +4,7 @@ import type { Profile } from '@/types/profile';
 export function generateProfile(): Profile {
   const firstName = faker.person.firstName();
   const lastName = faker.person.lastName();
-  // const gender = faker.person.sex() as 'male' | 'female';
+  // const slug = `${firstName}+${lastName}`;
   const id = faker.string.uuid();
 
   return {
@@ -12,7 +12,7 @@ export function generateProfile(): Profile {
     name: `${firstName} ${lastName}`,
     email: faker.internet.email({ firstName, lastName }),
     avatarUrl: `https://i.pravatar.cc/256?u=${id}`,
-    // avatarUrl: `https://testingbot.com/free-online-tools/random-avatar/256?u=${encodeURIComponent(firstName + '+' + lastName + '+' + gender)}`,
+    // avatarUrl: `https://testingbot.com/free-online-tools/random-avatar/256?u=${slug}`,
     username: faker.internet.username({ firstName, lastName }),
     phone: faker.phone.number(),
     website: faker.internet.url(),
