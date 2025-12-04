@@ -37,10 +37,14 @@ useHead(() => ({
     <div v-else-if="profile" class="max-w-4xl mx-auto">
       <div class="grid md:grid-cols-3 gap-10">
         <div class="text-center">
-          <img
+          <NuxtImg
             :src="profile.avatarUrl"
             :alt="`Photo of ${profile.name}`"
-            class="w-64 h-64 rounded-full mx-auto shadow-2xl object-cover" />
+            class="w-64 h-64 rounded-full mx-auto shadow-2xl object-cover"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+            placeholder="blur"
+            format="webp" />
           <h1 class="text-4xl font-bold mt-6">{{ profile.name }}</h1>
           <p class="text-2xl text-gray-600 mt-2">{{ profile.jobTitle }}</p>
           <p class="text-lg text-gray-500">{{ profile.company }}</p>

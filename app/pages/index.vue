@@ -26,7 +26,9 @@ const {
           :profile="profile" />
       </div>
       <div class="text-center mt-12">
-        <NuxtLink to="/search" class="btn-primary">
+        <NuxtLink
+          to="/search"
+          class="p-2 bg-blue-300 hover:bg-blue-500 rounded-md transition-colors">
           View More (10 Random)
         </NuxtLink>
       </div>

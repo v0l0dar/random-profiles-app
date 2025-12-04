@@ -18,12 +18,13 @@ defineProps<{
     class="block group relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300"
     :aria-label="`View profile of ${profile.name}`">
     <div class="aspect-w-1 aspect-h-1 relative">
-      <img
+      <NuxtImg
         :src="profile.avatarUrl"
         :alt="`Avatar of ${profile.name}`"
         class="w-full h-64 object-cover"
         loading="lazy"
-        referrerpolicy="no-referrer" />
+        referrerpolicy="no-referrer"
+        format="webp" />
       <div
         class="absolute inset-0 bg-linear-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     </div>

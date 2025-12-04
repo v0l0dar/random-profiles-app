@@ -9,12 +9,13 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "type-check": "nuxt typecheck",
-		"lint": "eslint .",
-		"lint:fix": "eslint . --fix",
-		"format": "prettier --write ."
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@nuxt/eslint": "^1.11.0",
+    "@nuxt/image": "^2.0.0",
     "@tailwindcss/vite": "^4.1.17",
     "eslint": "^9.39.1",
     "nuxt": "^4.2.1",

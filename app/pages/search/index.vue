@@ -28,7 +28,7 @@ useHead({
     <div class="flex justify-between items-center mb-12">
       <h1 class="text-4xl font-bold">Search Results</h1>
       <button
-        class="btn-primary flex items-center gap-2"
+        class="p-2 bg-blue-300 hover:bg-blue-500 rounded-md transition-colors"
         :disabled="pending"
         aria-label="Generate new random profiles"
         @click="() => refresh()">
