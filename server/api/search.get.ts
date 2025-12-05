@@ -4,7 +4,7 @@ import { profileCache } from '../utils/store';
 export default defineEventHandler(() => {
   const count = 10;
   const profiles = [];
-
+  cleanupCache();
   for (let i = 0; i < count; i++) {
     const profile = generateProfile();
 
