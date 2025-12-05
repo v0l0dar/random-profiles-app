@@ -1,14 +1,7 @@
 <script setup lang="ts">
+import type { Profile } from '@/types/profile';
 defineProps<{
-  profile: {
-    id: string;
-    name: string;
-    email: string;
-    avatarUrl: string;
-    username: string;
-    jobTitle: string;
-    company: string;
-  };
+  profile: Profile;
 }>();
 </script>
 
