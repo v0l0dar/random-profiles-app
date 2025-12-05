@@ -16,6 +16,30 @@ useHead(() => ({
     { property: 'og:image', content: profile.value?.avatarUrl },
     { property: 'og:title', content: profile.value?.name },
   ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: profile.value
+        ? JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: profile.value.name,
+            image: profile.value.avatarUrl,
+            jobTitle: profile.value.jobTitle,
+            worksFor: {
+              '@type': 'Organization',
+              name: profile.value.company,
+            },
+            email: profile.value.email,
+            url: profile.value.website,
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: profile.value.address,
+            },
+          })
+        : '',
+    },
+  ],
 }));
 </script>
 
